@@ -1,78 +1,72 @@
 .profile {
   max-width: 880px;
-  max-height: 120px;
+  width: 68.75%;
+  height: 120px;
   margin: 40px auto 0;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .profile__frame {
-  max-width: 120px;
-  max-height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.profile__avatar {
-  max-width: 169px;
-  max-height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .profile__info {
-  max-width: 415px;
-  max-height: 77px;
-  margin: auto 165px auto 30px;
-  display: grid;
-  grid-template-columns: auto 24px;
-  grid-template-rows: 39px auto;
-  gap: 16px 18px;
-  font-family: "Inter";
-  font-style: normal;
-  color: #ffffff;
+  width: 415px;
+  height: 77px;
+  margin: auto auto auto 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .profile__name {
   width: 373px;
+  margin: 0;
+
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
-  margin: 0;
-  grid-column: 1/1;
-  grid-row: 1/2;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.profile__title {
-  margin: 0;
+.profile__job {
+  width: 373px;
+  margin: auto auto 0 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  grid-column: 1 / !;
-  grid-template-rows: 2/3;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.profile__edit_button {
+.profile__btn_edit {
   border: #ffffff solid 1px;
-  grid-column: 2/3;
-  grid-row: 1/2;
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
-  box-sizing: border-box;
-  margin: auto 0 0;
-  display: flex;
+  padding: 7px;
+  margin: 15px 0 auto auto;
 }
-.profile__edit_icon {
-  max-width: 10px;
-  max-height: 10px;
-  margin: auto;
+
+.profile__btn_edit:hover {
+  opacity: 60%;
 }
-.profile__add_button {
+.profile__btn_add {
   border: #ffffff solid 2px;
+  box-sizing: border-box;
   width: 150px;
   height: 50px;
-  margin: auto;
-  box-sizing: border-box;
-  display: flex;
+  margin: auto 0;
+  padding: 14px 64px;
+  cursor: pointer;
 }
-.profile__add_icon {
-  width: 22px;
-  height: 22px;
-  margin: auto;
+.profile__btn_add:hover {
+  opacity: 60%;
 }

@@ -6,145 +6,170 @@
     <meta name="author" content="Fernando Escobar" />
     <meta name="description" content="web projecr around  the us " />
     <meta name="keywords" content="around" />
-
+    <link rel="shortcut icon" href="./Favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Web Around</title>
   </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <img
-          src="./images/logo.svg"
-          alt="logo arround the us"
-          class="header__logo"
-        />
-      </header>
+  <body class="page">
+    <header class="header">
+      <img
+        src="./images/logo_around.svg"
+        alt="logo de la pagina around the us"
+        class="header__logo"
+      />
+    </header>
+    <main>
       <section class="profile">
         <div class="profile__frame">
           <img
-            src="./images/avatar.jpg"
-            alt="avatar de perfil"
+            src="./images/avatar.svg"
+            alt="avatar de perfil imagen de un explorador"
             class="profile__avatar"
           />
         </div>
         <div class="profile__info">
           <h1 class="profile__name">Jacques Cousteau</h1>
-          <p class="profile__title">Explorador</p>
-          <div class="profile__edit_button">
-            <img
-              src="./images/edit.png"
-              alt="icono de lapiz"
-              class="profile__edit_icon"
-            />
-          </div>
-        </div>
-        <div class="profile__add_button">
           <img
-            src="./images/add.png"
-            alt="icono de mas"
-            class="profile__add_icon"
+            src="./images/icon_edit.svg"
+            alt="dibujo de un lapiz"
+            class="profile__btn_edit"
           />
+          <p class="profile__job">Explorador</p>
         </div>
+        <img
+          src="./images/icon_add.svg"
+          alt="simbolo de mas"
+          class="profile__btn_add"
+        />
       </section>
-      <section class="elements">
+      <section class="cards">
+        <!-- card 1 -->
         <div class="card">
-          <img
-            src="./images/yosemite.jpg"
-            alt="foto del valle de yosemite"
-            class="card__image"
-          />
-          <div class="card__info">
+          <div class="card__container">
+            <img
+              src="./images/yosemite.svg"
+              alt="foto de Yosemite"
+              class="card__image"
+            />
             <p class="card__text">Valle de Yosemite</p>
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
-
+        <!-- card 2 -->
         <div class="card">
-          <img
-            src="./images/lago_louise.jpg"
-            alt="foto del Lago Louise"
-            class="card__image"
-          />
-          <div class="card__info">
+          <div class="card__container">
+            <img
+              src="./images/lake_louise.svg"
+              alt="foto del lago Louide"
+              class="card__image"
+            />
             <p class="card__text">Lago Louise</p>
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
-
+        <!-- card 3 -->
         <div class="card">
-          <img
-            src="./images/calvas.jpg"
-            alt="foto de lass Montañas Calvas"
-            class="card__image"
-          />
-          <div class="card__info">
+          <div class="card__container">
+            <img
+              src="./images/bald_mountains.svg"
+              alt="foto de las Montañas Calvas"
+              class="card__image"
+            />
             <p class="card__text">Montañas Calvas</p>
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
+        <!-- card 4 -->
         <div class="card">
-          <img
-            src="./images/latemar.jpg"
-            alt="foto de Latemar"
-            class="card__image"
-          />
-          <div class="card__info">
+          <div class="card__container">
+            <img
+              src="./images/latemar.svg
+            "
+              alt="foto de Latemar"
+              class="card__image"
+            />
             <p class="card__text">Latemar</p>
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
-
+        <!-- card 5 -->
         <div class="card">
-          <img
-            src="./images/vanois.jpg"
-            alt="foto del Parque Nacional de la Vanoise"
-            class="card__image"
-          />
-          <div class="card__info">
-            <p class="card__text">Parque nacional de la Vanoise</p>
+          <div class="card__container">
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/vanoise_national_park.svg"
+              alt="foto del parque nacional Vanoise"
+              class="card__image"
+            />
+            <p class="card__text">Parque Nacional Vanoise</p>
+            <img
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
-
+        <!-- card 6 -->
         <div class="card">
-          <img
-            src="./images/lago_di_braies.jpg"
-            alt="foto del Lago di Braies"
-            class="card__image"
-          />
-          <div class="card__info">
+          <div class="card__container">
+            <img
+              src="./images/lake_di_braies.svg"
+              alt="foto del Lago di Braies"
+              class="card__image"
+            />
             <p class="card__text">Lago di Braies</p>
             <img
-              src="./images/like.png"
-              alt="icono de corazon"
-              class="card__like"
+              src="./images/icon_like.svg"
+              alt="icono de like"
+              class="card__btn_like"
             />
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <p class="footer__copyright">© 2024 Skondz</p>
-      </footer>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2024 Skondz</p>
+    </footer>
+    <div class="popup">
+      <form class="popup__container">
+        <img
+          src="./images/icon_close.svg"
+          alt="simbolo para cerrar"
+          class="popup__btn_close"
+        />
+        <p class="popup__title">Editar perfil</p>
+        <fieldset class="popup__fieldset">
+          <input
+            type="text"
+            id="name"
+            class="popup__input popup__input-name"
+            placeholder="Nombre"
+          />
+          <input
+            type="text"
+            id="job"
+            class="popup__input popup__input-job"
+            placeholder="Acerca de mi"
+          />
+          <button class="popup__btn_save">Guardar</button>
+        </fieldset>
+      </form>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -68,12 +68,12 @@
 @media screen and (max-width: 880px) {
   .profile {
     max-width: 581px;
-    height: 102px;
+    height: 120px;
     margin-top: 38px;
   }
   .profile__frame {
-    max-width: 102px;
-    max-height: 102px;
+    max-width: 120px;
+    max-height: 120px;
   }
   .profile__info {
     max-width: 300px;
@@ -97,6 +97,45 @@
   .profile__btn_add {
     width: 120px;
     height: 40px;
-    margin-top: 26px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 581px) {
+  .profile {
+    max-width: 282px;
+    height: 286px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__frame {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .profile__info {
+    max-width: 282px;
+    max-height: 50px;
+    margin: 30px 0 0;
+  }
+  .profile__name {
+    max-width: 206px;
+    font-size: 22px;
+    line-height: 27px;
+    margin-left: 29px;
+  }
+  .profile__btn_edit {
+    max-width: 18px;
+    max-height: 18px;
+    margin: 4px 29px auto auto;
+  }
+  .profile__job {
+    width: 282px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .profile__btn_add {
+    width: 282px;
+    height: 50px;
+    margin: 36px 0 0;
   }
 }

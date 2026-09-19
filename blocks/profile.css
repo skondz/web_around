@@ -1,30 +1,28 @@
 .profile {
   max-width: 880px;
-  width: 68.75%;
   height: 120px;
   margin: 40px auto 0;
   display: flex;
   justify-content: space-between;
 }
 .profile__frame {
-  width: 120px;
-  height: 120px;
+  max-width: 120px;
+  max-height: 120px;
   display: flex;
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
 }
 .profile__info {
-  width: 415px;
+  max-width: 415px;
   height: 77px;
   margin: auto auto auto 30px;
   display: flex;
   flex-wrap: wrap;
 }
 .profile__name {
-  width: 373px;
+  max-width: 373px;
   margin: 0;
-
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
@@ -35,8 +33,8 @@
   overflow: hidden;
 }
 .profile__job {
-  width: 373px;
-  margin: auto auto 0 0;
+  max-width: 373px;
+  margin: 0 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -46,27 +44,59 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.profile__btn {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.profile__btn:hover {
+  opacity: 60%;
+}
 .profile__btn_edit {
   border: #ffffff solid 1px;
-  box-sizing: border-box;
   width: 24px;
   height: 24px;
-  padding: 7px;
+  object-fit: scale-down;
   margin: 15px 0 auto auto;
-}
-
-.profile__btn_edit:hover {
-  opacity: 60%;
 }
 .profile__btn_add {
   border: #ffffff solid 2px;
-  box-sizing: border-box;
   width: 150px;
   height: 50px;
   margin: auto 0;
-  padding: 14px 64px;
-  cursor: pointer;
+  object-fit: scale-down;
 }
-.profile__btn_add:hover {
-  opacity: 60%;
+@media screen and (max-width: 880px) {
+  .profile {
+    max-width: 581px;
+    height: 102px;
+    margin-top: 38px;
+  }
+  .profile__frame {
+    max-width: 102px;
+    max-height: 102px;
+  }
+  .profile__info {
+    max-width: 300px;
+    height: 60px;
+    margin-left: 15px;
+  }
+  .profile__name {
+    max-width: 270px;
+    max-height: 33px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .profile__job {
+    max-height: 30px;
+  }
+  .profile__btn_edit {
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+  }
+  .profile__btn_add {
+    width: 120px;
+    height: 40px;
+    margin-top: 26px;
+  }
 }

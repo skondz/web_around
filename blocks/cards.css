@@ -1,10 +1,9 @@
 .cards {
   max-width: 880px;
-  width: 68.75%;
   margin: 50px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 282px);
-  grid-template-rows: repeat(2, 361px);
+  grid-template-rows: repeat(2, 362px);
   gap: 20px 17px;
 }
 .card__container {
@@ -43,4 +42,14 @@
 }
 .card__btn_like:hover {
   opacity: 50%;
+}
+.card__btn_like-active {
+  background-image: url(../images/icon_like-active.svg);
+}
+@media screen and (max-width: 880px) {
+  .cards {
+    max-width: 581px;
+    grid-template-columns: repeat(2, 282px);
+    grid-template-rows: repeat(3, 362px);
+  }
 }

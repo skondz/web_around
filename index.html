@@ -43,6 +43,8 @@
         />
       </section>
       <section class="cards">
+        <!-- card -->
+
         <!-- card 1 -->
         <div class="card">
           <div class="card__container">
@@ -58,8 +60,15 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
+
         <!-- card 2 -->
+
         <div class="card">
           <div class="card__container">
             <img
@@ -74,8 +83,15 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
+
         <!-- card 3 -->
+
         <div class="card">
           <div class="card__container">
             <img
@@ -90,8 +106,15 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
+
         <!-- card 4 -->
+
         <div class="card">
           <div class="card__container">
             <img
@@ -107,8 +130,15 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
+
         <!-- card 5 -->
+
         <div class="card">
           <div class="card__container">
             <img
@@ -123,8 +153,15 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
+
         <!-- card 6 -->
+
         <div class="card">
           <div class="card__container">
             <img
@@ -139,13 +176,23 @@
               class="card__btn_like"
             />
           </div>
+          <img
+            src="./images/icon_trash.svg"
+            alt="icono de eliminar"
+            class="card__btn_delete"
+          />
         </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">© 2024 Skondz</p>
     </footer>
-    <div class="popup">
+
+    <!-- PopUps -->
+
+    <!-- Profile -->
+
+    <div class="popup popup_profile" id="popup_profile">
       <form class="popup__container">
         <img
           src="./images/icon_close.svg"
@@ -156,20 +203,62 @@
         <fieldset class="popup__fieldset">
           <input
             type="text"
-            id="name"
+            id="profile-name"
             class="popup__input popup__input-name"
             placeholder="Nombre"
           />
           <input
             type="text"
-            id="job"
+            id="profile-job"
             class="popup__input popup__input-job"
             placeholder="Acerca de mi"
           />
-          <button class="popup__btn_save">Guardar</button>
+          <button class="popup__btn popup__btn_save">Guardar</button>
         </fieldset>
       </form>
     </div>
+
+    <!-- Add Card -->
+
+    <div class="popup popup_add" id="popup_add">
+      <form class="popup__container">
+        <img
+          src="./images/icon_close.svg"
+          alt="simbolo para cerrar"
+          class="popup__btn_close"
+        />
+        <p class="popup__title">Nuevo lugar</p>
+        <fieldset class="popup__fieldset">
+          <input
+            type="text"
+            id="add-title"
+            class="popup__input popup__input-title"
+            placeholder="Titulo"
+          />
+          <input
+            type="url"
+            id="add-link"
+            class="popup__input popup__input-link"
+            placeholder="Enlace a la imagen"
+          />
+          <button class="popup__btn popup__btn_create">Crear</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- Popup imagen -->
+    <div class="popup popup_image" id="popup__image">
+      <form class="popup__container popup__container-img">
+        <img
+          src="./images/icon_close.svg"
+          alt="simbolo para cerrar"
+          class="popup__btn_close"
+        />
+        <img src="" alt="" class="popup__image" />
+        <p class="popup__text"></p>
+      </form>
+    </div>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>

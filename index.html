@@ -42,147 +42,7 @@
           class="profile__btn profile__btn_add"
         />
       </section>
-      <section class="cards">
-        <!-- card -->
-
-        <!-- card 1 -->
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/yosemite.svg"
-              alt="foto de Yosemite"
-              class="card__image"
-            />
-            <p class="card__text">Valle de Yosemite</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-
-        <!-- card 2 -->
-
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/lake_louise.svg"
-              alt="foto del lago Louide"
-              class="card__image"
-            />
-            <p class="card__text">Lago Louise</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-
-        <!-- card 3 -->
-
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/bald_mountains.svg"
-              alt="foto de las Montañas Calvas"
-              class="card__image"
-            />
-            <p class="card__text">Montañas Calvas</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-
-        <!-- card 4 -->
-
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/latemar.svg
-            "
-              alt="foto de Latemar"
-              class="card__image"
-            />
-            <p class="card__text">Latemar</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-
-        <!-- card 5 -->
-
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/vanoise_national_park.svg"
-              alt="foto del parque nacional Vanoise"
-              class="card__image"
-            />
-            <p class="card__text">Parque Nacional Vanoise</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-
-        <!-- card 6 -->
-
-        <div class="card">
-          <div class="card__container">
-            <img
-              src="./images/lake_di_braies.svg"
-              alt="foto del Lago di Braies"
-              class="card__image"
-            />
-            <p class="card__text">Lago di Braies</p>
-            <img
-              src="./images/icon_like.svg"
-              alt="icono de like"
-              class="card__btn_like"
-            />
-          </div>
-          <img
-            src="./images/icon_trash.svg"
-            alt="icono de eliminar"
-            class="card__btn_delete"
-          />
-        </div>
-      </section>
+      <section class="cards"></section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">© 2024 Skondz</p>
@@ -198,6 +58,7 @@
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
           class="popup__btn_close"
+          id="close_profile"
         />
         <p class="popup__title">Editar perfil</p>
         <fieldset class="popup__fieldset">
@@ -226,6 +87,7 @@
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
           class="popup__btn_close"
+          id="close_add"
         />
         <p class="popup__title">Nuevo lugar</p>
         <fieldset class="popup__fieldset">
@@ -253,11 +115,30 @@
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
           class="popup__btn_close"
+          id="close_image"
         />
-        <img src="" alt="" class="popup__image" />
+        <img src="" alt="" class="popup__link" />
         <p class="popup__text"></p>
       </form>
     </div>
+
+    <!-- Template -->
+    <template class="card__template">
+      <div class="card__container">
+        <img class="card__image" src="" alt="" />
+        <img
+          class="card__btn_delete"
+          src="./images/icon_trash.svg"
+          alt="icono de eliminar"
+        />
+        <p class="card__text"></p>
+        <img
+          class="card__btn_like"
+          src="./images/icon_like.svg"
+          alt="icono de like"
+        />
+      </div>
+    </template>
 
     <script src="./scripts/script.js"></script>
   </body>

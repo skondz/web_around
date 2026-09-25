@@ -6,7 +6,15 @@
   grid-template-rows: repeat(2, 362px);
   gap: 20px 17px;
 }
-.card {
+
+.card__container {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
 }
 .card__btn_delete {
@@ -18,20 +26,14 @@
 .card__btn_delete:hover {
   opacity: 60%;
 }
-.card__container {
-  width: 282px;
-  height: 361px;
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: absolute;
-}
 .card__image {
   width: 282px;
   height: 282px;
   object-fit: cover;
+  cursor: pointer;
+}
+.card__image:hover {
+  filter: brightness(80%);
 }
 .card__text {
   width: 221px;

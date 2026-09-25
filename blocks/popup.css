@@ -27,7 +27,7 @@
   justify-content: center;
 }
 
-.popup__image {
+.popup__link {
   max-width: 75vw;
   max-height: 75vh;
 }

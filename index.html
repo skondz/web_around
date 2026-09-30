@@ -53,28 +53,40 @@
     <!-- Profile -->
 
     <div class="popup popup_profile" id="popup_profile">
-      <form class="popup__container">
+      <form class="popup__form" novalidate>
         <img
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
-          class="popup__btn_close"
+          class="popup__button_close"
           id="close_profile"
         />
         <p class="popup__title">Editar perfil</p>
         <fieldset class="popup__fieldset">
-          <input
-            type="text"
-            id="profile-name"
-            class="popup__input popup__input-name"
-            placeholder="Nombre"
-          />
-          <input
-            type="text"
-            id="profile-job"
-            class="popup__input popup__input-job"
-            placeholder="Acerca de mi"
-          />
-          <button class="popup__btn popup__btn_save">Guardar</button>
+          <label for="profile-name" class="popup__label"
+            ><input
+              type="text"
+              id="profile-name"
+              class="popup__input popup__input-name"
+              placeholder="Nombre"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span class="profile-name-error form__input-error"></span>
+          </label>
+          <label for="profile-job" class="popup__label">
+            <input
+              type="text"
+              id="profile-job"
+              class="popup__input popup__input-job"
+              placeholder="Acerca de mi"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span class="profile-job-error form__input-error"></span>
+          </label>
+          <button class="popup__button popup__button_save">Guardar</button>
         </fieldset>
       </form>
     </div>
@@ -82,39 +94,49 @@
     <!-- Add Card -->
 
     <div class="popup popup_add" id="popup_add">
-      <form class="popup__container">
+      <form class="popup__form" novalidate>
         <img
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
-          class="popup__btn_close"
+          class="popup__button_close"
           id="close_add"
         />
         <p class="popup__title">Nuevo lugar</p>
         <fieldset class="popup__fieldset">
-          <input
-            type="text"
-            id="add-title"
-            class="popup__input popup__input-title"
-            placeholder="Titulo"
-          />
-          <input
-            type="url"
-            id="add-link"
-            class="popup__input popup__input-link"
-            placeholder="Enlace a la imagen"
-          />
-          <button class="popup__btn popup__btn_create">Crear</button>
+          <label for="add-title" class="popup__label">
+            <input
+              type="text"
+              id="add-title"
+              class="popup__input popup__input-title"
+              placeholder="Titulo"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <span class="add-title-error form__input-error"></span>
+          </label>
+          <label for="add-link" class="popup__label">
+            <input
+              type="url"
+              id="add-link"
+              class="popup__input popup__input-link"
+              placeholder="Enlace a la imagen"
+              required
+            />
+            <span class="add-link-error form__input-error"></span>
+          </label>
+          <button class="popup__button popup__button_create">Crear</button>
         </fieldset>
       </form>
     </div>
 
     <!-- Popup imagen -->
-    <div class="popup popup_image" id="popup__image">
-      <form class="popup__container popup__container-img">
+    <div class="popup" id="popup__image">
+      <form class="popup__image">
         <img
           src="./images/icon_close.svg"
           alt="simbolo para cerrar"
-          class="popup__btn_close"
+          class="popup__button_close"
           id="close_image"
         />
         <img src="" alt="" class="popup__link" />
@@ -141,5 +163,6 @@
     </template>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

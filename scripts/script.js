@@ -1,20 +1,21 @@
 import { Card } from "./Card.js";
-import { closePopup, openProfilePopup, openAddPopup } from "./utils.js";
+import {
+  closePopup,
+  openProfilePopup,
+  openAddPopup,
+  updateProfile,
+} from "./utils.js";
+import { FormValidator } from "./FormValidator.js";
 
 const editBtn = document.querySelector(".profile__btn_edit");
 const popupProfile = document.querySelector(".popup_profile");
 const closeProfileBtn = popupProfile.querySelector("#close_profile");
-const nameProfile = document.querySelector(".profile__name");
-const nameInput = popupProfile.querySelector(".popup__input-name");
-const jobProfile = document.querySelector(".profile__job");
-const jobInput = popupProfile.querySelector(".popup__input-job");
 const addBtn = document.querySelector(".profile__btn_add");
 const popuoAdd = document.querySelector(".popup_add");
 const closeAddBtn = popuoAdd.querySelector("#close_add");
 const titleInput = popuoAdd.querySelector(".popup__input-title");
 const linkInput = popuoAdd.querySelector(".popup__input-link");
 const cardGrid = document.querySelector(".cards");
-
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -41,6 +42,13 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
+const validationSettings = {
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
 
 // Initialize
 initialCards.forEach(function (card) {
@@ -48,40 +56,39 @@ initialCards.forEach(function (card) {
   cardGrid.append(newCard.createCard());
 });
 
-// Profile Events
+// Profile
+editBtn.addEventListener("click", openProfilePopup);
 
-editBtn.addEventListener("click", () => {
-  openProfilePopup();
-  nameInput.value = nameProfile.textContent;
-  jobInput.value = jobProfile.textContent;
-});
-
-closeProfileBtn.addEventListener("click", closePopup);
-
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  jobProfile.textContent = jobInput.value;
-  nameProfile.textContent = nameInput.value;
+closeProfileBtn.addEventListener("click", () => {
   closePopup();
-}
-
-popupProfile.addEventListener("submit", handleProfileFormSubmit);
-
-// Add Events
-
-addBtn.addEventListener("click", () => {
-  openAddPopup();
-  titleInput.value = "";
-  linkInput.value = "";
+  validateProfile.eneableValidation();
 });
 
-closeAddBtn.addEventListener("click", closePopup);
+popupProfile.addEventListener("submit", () => {
+  updateProfile();
+  validateProfile.eneableValidation();
+});
 
-function createNewCard(evt) {
+// Add
+addBtn.addEventListener("click", openAddPopup);
+
+closeAddBtn.addEventListener("click", () => {
+  closePopup();
+  validateAdd.eneableValidation();
+});
+
+function createNewCard() {
   const newCard = new Card(titleInput.value, linkInput.value);
-  evt.preventDefault();
   cardGrid.append(newCard.createCard());
   closePopup();
+  validateAdd.eneableValidation();
 }
 
 popuoAdd.addEventListener("submit", createNewCard);
+
+//Validation
+const validateProfile = new FormValidator(validationSettings, popupProfile);
+const validateAdd = new FormValidator(validationSettings, popuoAdd);
+
+validateProfile.eneableValidation();
+validateAdd.eneableValidation();
